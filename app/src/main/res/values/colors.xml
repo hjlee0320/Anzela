@@ -8,5 +8,17 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="black_two">#1e1e1e</color>
+    <color name="acacac">#ffffff</color>
+    <color name="background">#1e1e1e</color>
+    <color name="black_line">#272727</color>
+    <color name="very_light_pink">#c0c0c0</color>
+    <color name="brown_grey">#acacac</color>
+    <color name="black_four">#343434</color>
+    <color name="black_three">#181818</color>
+    <color name="greyish_brown">#434343</color>
+    <color name="very_light_pink_two">#d8d8d8</color>
+    <color name="black_five">#000000</color>
+    <color name="very_light_pink_three">#e7e7e7</color>
+    <color name="black_six">#0d0d0d</color>
+    <color name="tealish">#45d6b4</color>
 </resources>
