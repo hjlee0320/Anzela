@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/back_blackRadius"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/large_margin"
+    android:paddingTop="@dimen/middle_margin"
+    android:paddingRight="@dimen/large_margin"
+    android:paddingBottom="@dimen/middle_margin">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nexon_lv_2_gothic_medium"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        tools:text="목감천 라이딩해요" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nexon_lv_2_gothic"
+            android:textColor="@color/very_light_pink"
+            android:textSize="14sp"
+            android:textStyle="normal"
+            tools:text="최대 4명" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="14dp"
+            android:layout_marginLeft="7.5dp"
+            android:layout_marginRight="7.5dp"
+            android:background="@color/very_light_pink" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nexon_lv_2_gothic"
+            android:textColor="@color/very_light_pink"
+            android:textSize="14sp"
+            android:textStyle="normal"
+            tools:text="예정일 : " />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nexon_lv_2_gothic"
+            android:textColor="@color/very_light_pink"
+            android:textSize="14sp"
+            android:textStyle="normal"
+            tools:text="2021. 01. 31" />
+    </LinearLayout>
+</LinearLayout>

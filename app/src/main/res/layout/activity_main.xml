@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background"
+    android:background="@color/black_two"
     android:orientation="vertical"
     android:paddingLeft="@dimen/default_margin"
     android:paddingRight="@dimen/default_margin"
@@ -14,19 +14,34 @@
         android:layout_height="60dp">
 
         <ImageView
+            android:id="@+id/btn_menu"
             android:layout_width="18dp"
             android:layout_height="14dp"
             android:layout_centerVertical="true"
             android:adjustViewBounds="true"
             android:src="@drawable/ic_menu" />
 
-        <ImageView
+        <RelativeLayout
             android:layout_width="18dp"
             android:layout_height="20dp"
             android:layout_centerVertical="true"
-            android:layout_toLeftOf="@id/btn_myInfo"
-            android:adjustViewBounds="true"
-            android:src="@drawable/ic_noti" />
+            android:layout_toLeftOf="@id/btn_myInfo">
+
+            <ImageView
+                android:id="@+id/btn_noti"
+                android:layout_width="18dp"
+                android:layout_height="20dp"
+                android:layout_alignParentBottom="true"
+                android:adjustViewBounds="true"
+                android:src="@drawable/ic_noti" />
+
+            <View
+                android:id="@+id/noti_new"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/back_tealishCircle" />
+        </RelativeLayout>
 
         <ImageView
             android:id="@+id/btn_myInfo"
@@ -39,69 +54,184 @@
             android:src="@drawable/myInfo" />
     </RelativeLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:fontFamily="@font/nexon_lv_2_gothic"
-        android:textColor="@color/white"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        tools:text="do님, 오늘도\n달려볼까요?" />
-
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="@dimen/middle_margin">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/nexon_lv_2_gothic"
-            android:textColor="@color/brown_grey"
-            android:textSize="14sp"
-            android:textStyle="normal"
-            tools:text="오늘 날씨" />
+        android:layout_height="match_parent"
+        android:scrollbars="none">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical">
-
-            <ImageView
-                android:layout_width="20dp"
-                android:layout_height="21dp"
-                android:adjustViewBounds="true"
-                android:src="@drawable/ic_weather_sun" />
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/nexon_lv_2_gothic_medium"
-                android:textColor="@color/tealish"
-                android:textSize="14sp"
-                android:textStyle="normal"
-                tools:text="24°" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/nexon_lv_2_gothic_medium"
-                android:textColor="@color/tealish"
-                android:textSize="14sp"
-                android:textStyle="normal"
-                tools:text="맑음" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
                 android:fontFamily="@font/nexon_lv_2_gothic"
                 android:textColor="@color/white"
-                android:textSize="14sp"
-                android:textStyle="normal"
-                tools:text="라이딩하기 좋은 날이네요!" />
+                android:textSize="24sp"
+                android:textStyle="bold"
+                tools:text="do님, 오늘도\n달려볼까요?" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_margin"
+                android:background="@drawable/back_blackRadius"
+                android:orientation="vertical"
+                android:padding="@dimen/large_margin">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nexon_lv_2_gothic"
+                    android:textColor="@color/brown_grey"
+                    android:textSize="14sp"
+                    android:textStyle="normal"
+                    tools:text="오늘 날씨" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/small_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="21dp"
+                        android:layout_marginRight="@dimen/small_margin"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/ic_weather_sun" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="4dp"
+                        android:fontFamily="@font/nexon_lv_2_gothic_medium"
+                        android:textColor="@color/tealish"
+                        android:textSize="14sp"
+                        android:textStyle="normal"
+                        tools:text="24°" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nexon_lv_2_gothic_medium"
+                        android:textColor="@color/tealish"
+                        android:textSize="14sp"
+                        android:textStyle="normal"
+                        tools:text="맑음" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nexon_lv_2_gothic"
+                        android:gravity="right|center_vertical"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="normal"
+                        tools:text="라이딩하기 좋은 날이네요!" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/my_riding"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/view_margin"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nexon_lv_2_gothic"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:text="다가오는 라이딩 일정" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/large_margin" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="18dp"
+                android:layout_marginTop="@dimen/view_margin">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/nexon_lv_2_gothic"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:text="내 근처 라이딩 모임" />
+
+                <ImageView
+                    android:layout_width="9dp"
+                    android:layout_height="12dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/my_location"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/ic_marker" />
+
+                <TextView
+                    android:id="@+id/my_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="4dp"
+                    android:fontFamily="@font/nexon_lv_2_gothic"
+                    android:gravity="end"
+                    android:textColor="@color/brown_grey"
+                    android:textSize="14sp"
+                    android:textStyle="normal"
+                    tools:text="서울시 구로구" />
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/large_margin" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="32dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/btn_ridingList"
+                    android:fontFamily="@font/nexon_lv_2_gothic"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:textStyle="normal"
+                    tools:text="더 많은 글 보러가기" />
+
+                <LinearLayout
+                    android:id="@+id/btn_ridingList"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="8dp"
+                    android:background="@drawable/back_tealishCircle"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="11dp"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/ic_right_arrow_white" />
+                </LinearLayout>
+            </RelativeLayout>
         </LinearLayout>
-    </LinearLayout>
+    </ScrollView>
 </LinearLayout>
